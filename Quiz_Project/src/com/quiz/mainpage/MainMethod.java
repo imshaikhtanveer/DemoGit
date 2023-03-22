@@ -3,6 +3,7 @@ package com.quiz.mainpage;
 
 
 import com.quiz.commonconnectionpage.*;
+
 import com.quiz.examination.*;
 import com.quiz.loginpage.*;
 import com.quiz.registrationpage.*;
@@ -18,10 +19,24 @@ public class MainMethod {
 		
 		//Student registration
 		
+		
+		
 
 
 StudentRegistration sr= new StudentRegistration(); 
 Scanner sc=new Scanner(System.in);
+
+
+System.out.println("Welcome to Quiz based application");
+
+System.out.println("Enter your choice>>");
+System.out.println("1. Registration");
+System.out.println("2. Login");
+
+int no=sc.nextInt();
+
+if (no==1)
+{
 		
 		System.out.println("<<Student Registration Page>>");
 		
@@ -48,10 +63,11 @@ Scanner sc=new Scanner(System.in);
 	
 		
 		
-		sr.insertDetails(fName, lName,  userName, password,  city, 
+		insertDetails(fName, lName,  userName, password,  city, 
 				mailId,  mobileNo);
 		
-		
+}
+else if(no==2) {
 		System.out.println("\n \n <<<Login Page>>>");
 		
 		
@@ -61,7 +77,7 @@ Scanner sc=new Scanner(System.in);
 		
 			
 			
-		LoginPage fr1= new LoginPage(); 
+		LoginPage lp= new LoginPage(); 
 		
 		Scanner scanner = new Scanner(System.in);
 
@@ -71,7 +87,7 @@ Scanner sc=new Scanner(System.in);
 		System.out.println("Enter  password");
 		String password1 = scanner.nextLine();
 		
-		 fr1.fetchRecord(userName1,password1);
+		 checkLogin(userName1,password1);
 		 
 		
 		
@@ -81,8 +97,21 @@ Scanner sc=new Scanner(System.in);
 		 Quiz_Questions qs=new Quiz_Questions();
 			qs.method_1();
 		
+}else {
+        System.out.println("Invalid choice");
+}
+      }
 		
+	
+
+	private static void checkLogin(String userName1, String password1) {
+		// TODO Auto-generated method stub
 		
+	}
+
+	private static void insertDetails(String fName, String lName, String userName, String password, String city,
+			String mailId, String mobileNo) {
+		// TODO Auto-generated method stub
 		
 	}
 

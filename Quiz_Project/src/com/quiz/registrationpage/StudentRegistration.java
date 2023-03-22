@@ -2,6 +2,8 @@ package com.quiz.registrationpage;
 
 
 import com.quiz.commonconnectionpage.*;
+import com.quiz.mainpage.*;
+import com.quiz.*;
 
 import java.sql.DriverManager;
 import java.util.Scanner;
@@ -16,6 +18,8 @@ public class StudentRegistration {
 	public static void insertDetails(String fName,String lName, 
 			String userName, String password, String city, 
 			String mailId, String mobileNo) {
+		
+		
 		
 		
 		
@@ -47,7 +51,7 @@ public class StudentRegistration {
 		}
 	
 	public static void main(String[] args) {
-	/*	
+		
 		Scanner sc=new Scanner(System.in);
 		
 		System.out.println("<<Student Registration>>");
@@ -78,7 +82,7 @@ public class StudentRegistration {
 		insertDetails(fName, lName,  userName, password,  city, 
 				mailId,  mobileNo);
 		
-*/
+
 	}
 		
 		
